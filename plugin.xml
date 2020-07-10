@@ -1,0 +1,35 @@
+<?xml version='1.0' encoding='utf-8'?>
+<plugin id="cordova-plugin-londen" version="0.0.1" xmlns="http://apache.org/cordova/ns/plugins/1.0" xmlns:android="http://schemas.android.com/apk/res/android">
+    <name>cordova-plugin-londen</name>
+    <js-module name="cordova-plugin-londen" src="www/cordova-plugin-londen.js">
+        <clobbers target="cordova.plugins.londen" />
+    </js-module>
+    <platform name="android">
+        <config-file parent="/*" target="res/xml/config.xml">
+            <feature name="LondenValidator">
+                <param name="android-package" value="com.chinacreator.LondenValidator" />
+            </feature>
+        </config-file>
+        <config-file parent="/*" target="AndroidManifest.xml">
+            <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+            <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+            <uses-permission android:name="android.permission.WRITE_OWNER_DATA" />
+            <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+            <uses-permission android:name="android.permission.INTERNET" />
+            <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+            <uses-permission android:name="android.hardware.usb.host" />
+            <uses-permission android:name="android.hardware.usb.accessory" />
+            <uses-permission android:name="android.permission.CHANGE_CONFIGURATION" />
+            <uses-permission android:name="android.permission.READ_LOGS" />
+            <uses-feature android:name="android.hardware.usb.UsbAccessory" />
+            <uses-feature android:name="android.hardware.usb.UsbManager" />
+            <uses-feature android:name="android.hardware.usb.UsbRequest" />
+            <uses-feature android:name="android.hardware.usb.host" android:required="true" />
+            <uses-feature android:name="android.hardware.usb.accessory" android:required="true" />
+        </config-file>
+        <source-file src="src/android/LondenValidator.java" target-dir="src/com/chinacreator" />
+        <framework src="src/android/londen.gradle" custom="true" type="gradleReference" />
+        <hook type="after_plugin_install" src="scripts/afterPluginInstall.js" />
+        <hook type="before_plugin_uninstall" src="scripts/beforePluginUninstall.js" />
+    </platform>
+</plugin>

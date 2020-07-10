@@ -1,0 +1,30 @@
+{
+  "name": "cordova-plugin-londen",
+  "version": "0.0.1",
+  "description": "龙盾身份证验证插件",
+  "cordova": {
+    "id": "cordova-plugin-londen",
+    "platforms": [
+      "android"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/OldKinn/cordova-plugin-londen.git"
+  },
+  "keywords": [
+    "ecosystem:cordova",
+    "cordova-android",
+    "龙盾",
+    "身份证"
+  ],
+  "author": "leonooo@163.com",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/OldKinn/cordova-plugin-londen/issues"
+  },
+  "homepage": "https://github.com/OldKinn/cordova-plugin-londen#readme",
+  "dependencies": {
+    "fs-extra": "^9.0.1"
+  }
+}

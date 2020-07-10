@@ -1,0 +1,11 @@
+dependencies {
+    implementation files('libs/libIDReaders_V2.2.jar')
+}
+
+android {
+    sourceSets {
+        main {
+            jniLibs.srcDir("libs")
+        }
+    }
+}
